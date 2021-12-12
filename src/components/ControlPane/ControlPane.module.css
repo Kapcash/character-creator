@@ -10,12 +10,24 @@
     to deal with it yet!
   */
   margin-bottom: 32px;
+
+  width: 85%;
 }
 
 .title {
   margin: 0;
   /* Optical centering */
   margin-bottom: -4px;
+}
+
+@media screen and (max-width: 600px) {
+  .controlPane {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .title {
+    margin-bottom: 4px;
+  }
 }
 
 .metadata {

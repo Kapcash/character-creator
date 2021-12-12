@@ -18,7 +18,37 @@
 
 .header {
   padding-bottom: 64px;
-  width: 65%;
+}
+
+@media screen and (min-width: 600px) {
+  .header {
+    width: 65%;
+  }
+  .controlColumn {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    visibility: hidden;
+  }
+  .characterWrapper {
+    top: 15px;
+    left: 0;
+    bottom: initial;
+    right: initial;
+  }
+  .controlColumn {
+    display: flex;
+    overflow: auto;
+    z-index: 10;
+    position: relative;
+    gap: 10px;
+    margin-left: -32px;
+    margin-right: -32px;
+    padding: inherit;
+  }
 }
 
 .title {
@@ -43,13 +73,4 @@
 }
 
 .controlColumn {
-  width: 50%;
-}
-
-.background {
-  position: fixed;
-  bottom: 0;
-  height: 40%;
-  width: 100%;
-  background-color: hsl(195deg, 20%, 86%);
 }
